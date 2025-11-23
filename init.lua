@@ -108,6 +108,11 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
+vim.keymap.set("n", "<leader>np", function()
+  vim.cmd.tabnew()
+  vim.cmd.term()
+  vim.cmd("startinsert")
+end)
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.hl.on_yank()`
